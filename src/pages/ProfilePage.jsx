@@ -11,7 +11,7 @@ import { FaEdit, FaCheckCircle, FaTimesCircle, FaCopy } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 
 const ProfilePage = () => {
-  const { user, authToken, logout } = useAuth();
+  const { user, authToken } = useAuth();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [errorOtp, setErrorOtp] = useState(null);
