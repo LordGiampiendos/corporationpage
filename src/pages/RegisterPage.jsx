@@ -244,7 +244,7 @@ const RegisterPage = () => {
           )}
         </Formik>
 
-        <div className="text-center mt-4">
+        <div className="text-center mt-4 d-flex">
           <GoogleOAuthProvider clientId={clientId}>
             <GoogleLogin
               onSuccess={handleGoogleLogin}
