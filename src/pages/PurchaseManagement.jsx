@@ -128,7 +128,10 @@ const PurchaseManagement = () => {
                                                                 <Button
                                                                     variant="success"
                                                                     className="me-2 mb-2 mb-sm-0"
-                                                                    onClick={() => setShowVerifyModal(true)}
+                                                                    onClick={() => {
+                                                                        setShowVerifyModal(true);
+                                                                        setSelectedPurchaseId(purchase.id);
+                                                                    }}
                                                                 >
                                                                     <FaCheckCircle className='mb-1' /> Verify
                                                                 </Button>
