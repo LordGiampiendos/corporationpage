@@ -31,7 +31,6 @@ const EditProfilePopup = ({ show, handleClose, user, authToken }) => {
       const compressedFile = await imageCompression(file, options);
       return compressedFile;
     } catch (error) {
-      console.error('Error', error);
       return null;
     }
   };
@@ -50,7 +49,7 @@ const EditProfilePopup = ({ show, handleClose, user, authToken }) => {
       formData.append('phoneNumber', phoneNumber);
     }
     if (image) {
-      const compressedFile = await compressImage(profileImage);
+      const compressedFile = await compressImage(image);
       if (compressedFile) {
         formData.append('image', compressedFile);
       }
