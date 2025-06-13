@@ -29,7 +29,9 @@ const EditProfilePopup = ({ show, handleClose, user, authToken }) => {
     const formData = new FormData();
     formData.append('firstName', firstName);
     formData.append('lastName', lastName);
-    formData.append('phoneNumber', phoneNumber);
+    if (phoneNumber) {
+      formData.append('phoneNumber', phoneNumber);
+    }
     if (image) {
       formData.append('image', image);
     } else if (imgUrl) {
