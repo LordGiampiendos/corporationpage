@@ -277,7 +277,7 @@ const ProductDetailPage = () => {
             )}
 
             <div className="mt-5">
-                <h4>Comments ({comments.length})</h4>
+                <h4 className="mt-2">Comments ({comments.length})</h4>
                 {comments.length === 0 ? (
                     <p>No comments yet.</p>
                 ) : (
