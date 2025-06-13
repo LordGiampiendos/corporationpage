@@ -114,7 +114,7 @@ const PurchaseManagement = () => {
                                                 <td>{purchase.userId}</td>
                                                 <td>{purchase.description}</td>
                                                 <td>
-                                                    <span className={`badge ${purchase.state === "Payed" ? "bg-warning" : "bg-success"}`}>
+                                                    <span className={`badge ${purchase.state === "Paid" ? "bg-warning" : "bg-success"}`}>
                                                         {purchase.state}
                                                     </span>
                                                 </td>
