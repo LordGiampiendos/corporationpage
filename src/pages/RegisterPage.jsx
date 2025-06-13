@@ -230,9 +230,9 @@ const RegisterPage = () => {
                   style={{ borderRadius: '8px', padding: '12px 16px' }}
                 />
                 {profileImage && (
-                  <div className="mx-5 my-4">
-                    <img src={URL.createObjectURL(profileImage)} alt="Preview" style={{ width: '100px', borderRadius: 50 }} />
-                    <Button variant="danger" onClick={() => handleImageRemove(setFieldValue)} className="mt-2 mx-5">Remove Image</Button>
+                  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '10px' }}>
+                    <img src={URL.createObjectURL(profileImage)} alt="preview" style={{ width: '100px', height: '100px', borderRadius: '50%', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }} />
+                    <Button variant="danger" className="mt-2" onClick={() => handleImageRemove(setFieldValue)}>Remove Image</Button>
                   </div>
                 )}
               </Form.Group>
