@@ -50,11 +50,9 @@ const EditProfilePopup = ({ show, handleClose, user, authToken }) => {
       formData.append('phoneNumber', phoneNumber);
     }
     if (image) {
-      if (profileImage) {
-        const compressedFile = await compressImage(profileImage);
-        if (compressedFile) {
-          formData.append('image', compressedFile);
-        }
+      const compressedFile = await compressImage(profileImage);
+      if (compressedFile) {
+        formData.append('image', compressedFile);
       }
     } else if (imgUrl) {
       formData.append('img', imgUrl);
