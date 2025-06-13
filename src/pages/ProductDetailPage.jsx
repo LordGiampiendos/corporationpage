@@ -286,13 +286,13 @@ const ProductDetailPage = () => {
                             <Card.Body>
                                 <div className="d-flex align-items-center">
                                     <Image
-                                        src={comment.user.img || 'data:image/png;base64,...'}
+                                        src={comment.img || 'data:image/png;base64,...'}
                                         roundedCircle
                                         width={40}
                                         height={40}
                                     />
                                     <div className="ms-3">
-                                        <strong>{comment.user.username}</strong>
+                                        <strong>{comment.username}</strong>
                                         <p>{comment.content}</p>
                                     </div>
                                 </div>
