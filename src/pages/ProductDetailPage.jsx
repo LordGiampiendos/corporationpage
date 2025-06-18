@@ -236,7 +236,7 @@ const ProductDetailPage = () => {
                     {userComment && !editing ? (
                         <Card>
                             <Card.Body>
-                                <div className="d-flex align-items-center mb-3">
+                                <div className="d-flex align-items-center">
                                     <Image
                                         src={user.user.img || 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAQlBMVEX////y8vK0tLT19fWwsLD6+vr4+Piurq7ExMS4uLjw8PC1tbXl5eXZ2dm9vb3IyMjf39/c3NzQ0NDMzMzU1NTk5PUEbEoQ+jEwdmhqxF8AiVqltY85RFS9gdnYAAA2kj9Oj3+VBxMgIFMjGAqA1mruRnl6NppvKv1XZr+zvUbbLYqvIbxzL+a4g+HqS23HLhkpPO3TZVgB17khD0g5Wr1Yjt0gDFZ28/fvMr90Wbg2gMxyRM8jlZAQDYbpBpj3qOW9zIg4Y5aqnZ5H8oWpEJlSm6cml94rME5y7w6A80UQAAAe0lEQVR4nOzda3LkqBgG4XzrcAStAGIFhE2gEJl5Tktt4PgsBMT9+m9VyyHqMvql5zOs4yAEw5ckDk4u7w4+nd5CjNRjt4IgD++nZP47dq/gp6jmJp9IzlSh0n2NBh+LgFc4u4J0+jf5LRvbwAlskF+wJrdw6hLBcCqu+nSmheV3OBZtEXHt0g6jmMNOvhx8sMIvhfoL8RswZz4aeT4hSZlbQzqIUR0t+VZoxEu/nQFCkZXKnw1A0O2Mz3V0zJXpfk8Uw19DE+wG4P8eF/dmVrlk8w/wgg7j8d11VmFfZL7reZpClcUlSfgC3ZoSl9g5hN59l6AAGd7mfSkNktTf9H4hbP7QAAAABJRU5ErkJggg=='}
                                         roundedCircle
