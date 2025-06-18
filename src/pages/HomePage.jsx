@@ -44,7 +44,10 @@ const HomePage = () => {
                 <h1 className="display-4 mb-4 text-secondary font-weight-bold" style={{ lineHeight: '1.2' }}>
                     We Create Your Professional Website
                 </h1>
-                <p className="lead mb-4 text-darkslategray" style={{ fontSize: '1.2rem', fontWeight: '300' }}>
+                <p
+                    className="lead mb-4 text-darkslategray glowing-text-hover"
+                    style={{ fontSize: '1.2rem', fontWeight: '300' }}
+                >
                     Tailored digital solutions to grow your business online.
                 </p>
                 <Button
