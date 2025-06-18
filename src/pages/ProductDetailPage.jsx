@@ -291,8 +291,8 @@ const ProductDetailPage = () => {
                                         <strong>{comment.firstName} {comment.lastName}</strong><br />
                                         <small className="text-muted">@{comment.username}</small>
                                     </div>
-                                    <Card.Text>{comment.content}</Card.Text>
                                 </div>
+                                <Card.Text>{comment.content}</Card.Text>
                             </Card.Body>
                         </Card>
                     ))
