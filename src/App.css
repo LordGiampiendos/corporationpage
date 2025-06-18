@@ -82,10 +82,6 @@ button:disabled {
   background-color: #6c757d;
 }
 
-button:hover:not(:disabled) {
-  background-color: gainsboro;
-}
-
 .alert {
   margin-top: 20px;
 }
