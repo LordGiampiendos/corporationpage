@@ -20,7 +20,7 @@ export const AuthProvider = ({ children }) => {
         setUser(response.data);
       })
       .catch(error => {
-        if(error.response.data === "Token scaduto.") {
+        if(error.response.data === "Token expired.") {
           logout();
         }
       })
