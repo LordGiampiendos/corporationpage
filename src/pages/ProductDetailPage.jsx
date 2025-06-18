@@ -280,7 +280,7 @@ const ProductDetailPage = () => {
                     comments.map((comment) => (
                         <Card key={comment.commentId} className="mb-3">
                             <Card.Body>
-                                <div className="d-flex align-items-center">
+                                <div className="d-flex align-items-center mb-3">
                                     <Image
                                         src={comment.img || 'data:image/png;base64,...'}
                                         roundedCircle
