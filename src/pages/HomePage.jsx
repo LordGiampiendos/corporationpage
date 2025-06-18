@@ -43,13 +43,13 @@ const HomePage = () => {
             </Container>
             
             <Container id="services" className="mb-5">
-                <h2 className="mb-4 text-center display-4 text-primary">Our Services</h2>
+                <h2 className="mb-4 text-center display-4 text-secondary">Our Services</h2> {/* Changed to text-secondary */}
                 <Row className="d-flex justify-content-center">
                     <Col md={4} className="mb-4">
-                        <Card className="h-100 shadow-lg border-0 rounded-lg transition-all">
+                        <Card className="h-100 shadow-lg border-0 rounded-lg transition-all" style={{ backgroundColor: 'rgba(169, 169, 169, 0.1)' }}> {/* Light gray background */}
                             <Card.Body className="p-5 text-center">
-                                <FaLaptop size={60} className="mb-4 text-primary" />
-                                <Card.Title className="h4">Professional Websites</Card.Title>
+                                <FaLaptop size={60} className="mb-4 text-secondary" /> {/* Changed icon color to gray */}
+                                <Card.Title className="h4 text-dark">Professional Websites</Card.Title> {/* Dark text */}
                                 <Card.Text className="text-muted">
                                     Modern and responsive design to increase your online visibility.
                                 </Card.Text>
@@ -57,10 +57,10 @@ const HomePage = () => {
                         </Card>
                     </Col>
                     <Col md={4} className="mb-4">
-                        <Card className="h-100 shadow-lg border-0 rounded-lg transition-all">
+                        <Card className="h-100 shadow-lg border-0 rounded-lg transition-all" style={{ backgroundColor: 'rgba(169, 169, 169, 0.1)' }}>
                             <Card.Body className="p-5 text-center">
-                                <FaShoppingCart size={60} className="mb-4 text-primary" />
-                                <Card.Title className="h4">E-commerce</Card.Title>
+                                <FaShoppingCart size={60} className="mb-4 text-secondary" />
+                                <Card.Title className="h4 text-dark">E-commerce</Card.Title>
                                 <Card.Text className="text-muted">
                                     Sell your products online with easy-to-use and secure platforms.
                                 </Card.Text>
@@ -68,10 +68,10 @@ const HomePage = () => {
                         </Card>
                     </Col>
                     <Col md={4} className="mb-4">
-                        <Card className="h-100 shadow-lg border-0 rounded-lg transition-all">
+                        <Card className="h-100 shadow-lg border-0 rounded-lg transition-all" style={{ backgroundColor: 'rgba(169, 169, 169, 0.1)' }}>
                             <Card.Body className="p-5 text-center">
-                                <FaBullhorn size={60} className="mb-4 text-primary" />
-                                <Card.Title className="h4">SEO & Digital Marketing</Card.Title>
+                                <FaBullhorn size={60} className="mb-4 text-secondary" />
+                                <Card.Title className="h4 text-dark">SEO & Digital Marketing</Card.Title>
                                 <Card.Text className="text-muted">
                                     Personalized strategies to improve ranking and reach new customers.
                                 </Card.Text>
