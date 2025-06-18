@@ -83,7 +83,7 @@ button:disabled {
 }
 
 button:hover:not(:disabled) {
-  background-color: whitesmoke;
+  background-color: gray;
 }
 
 .alert {
