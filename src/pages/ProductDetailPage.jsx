@@ -64,12 +64,7 @@ const ProductDetailPage = () => {
             });
             window.location.reload();
         } catch (error) {
-            if (error.response && error.response.status === 400) {
-                setErrorMessage('You cannot comment because you have not purchased this product.');
-            }
-            else {
-                setErrorMessage('Error creating comment.');
-            }
+            setErrorMessage('You cannot comment because you have not purchased this product.');
         }
     };
 
