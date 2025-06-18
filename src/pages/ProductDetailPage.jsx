@@ -16,7 +16,6 @@ const ProductDetailPage = () => {
     const [editing, setEditing] = useState(false);
     const [successMessage, setSuccessMessage] = useState('');
     const [isLoading, setIsLoading] = useState({ cart: false, wishlist: false });
-    const [loadingEdit, setLoadingEdit] = useState(false);
     const [loadingDelete, setLoadingDelete] = useState(false);
     const [loadingSubmit, setLoadingSubmit] = useState(false);
 
@@ -75,7 +74,7 @@ const ProductDetailPage = () => {
     };
 
     const handleUpdateComment = async (e) => {
-        setLoadingEdit(true);
+        setLoadingSubmit(true);
         e.preventDefault();
         const formData = new FormData();
         formData.append('content', commentContent);
@@ -83,11 +82,11 @@ const ProductDetailPage = () => {
             await axios.put(`https://servercorporation.pagekite.me/api/comments/users/${userComment.commentId}`, formData, {
                 headers: { Authorization: `Bearer ${authToken}` }
             });
-            setLoadingEdit(false);
+            setLoadingSubmit(false);
             window.location.reload();
         } catch (error) {
             setErrorMessage('Error updating comment.');
-            setLoadingEdit(false);
+            setLoadingSubmit(false);
         }
     };
 
@@ -266,21 +265,7 @@ const ProductDetailPage = () => {
                                             className="mb-2"
                                             onClick={() => setEditing(true)}
                                         >
-                                            {loadingEdit ? (
-                                                <>
-                                                    <Spinner
-                                                        as="span"
-                                                        animation="border"
-                                                        size="sm"
-                                                        role="status"
-                                                        aria-hidden="true"
-                                                        className="me-2"
-                                                    />
-                                                    Loading...
-                                                </>
-                                            ) : (
-                                                'Edit'
-                                            )}
+                                            Edit
                                         </Button>
                                         <Button
                                             variant="outline-danger"
