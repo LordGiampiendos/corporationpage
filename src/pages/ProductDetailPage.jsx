@@ -288,7 +288,7 @@ const ProductDetailPage = () => {
                                         height={40}
                                     />
                                     <div className="ms-3">
-                                        <strong>{comment.username}</strong>
+                                        <strong>{comment.firstName} {comment.lastName}</strong>
                                         <p>{comment.content}</p>
                                     </div>
                                 </div>
