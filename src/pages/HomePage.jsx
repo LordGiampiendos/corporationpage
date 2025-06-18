@@ -45,7 +45,7 @@ const HomePage = () => {
                     We Create Your Professional Website
                 </h1>
                 <p
-                    className="lead mb-4 text-darkslategray glowing-text-hover"
+                    className="lead mb-4 text-darkslategray glowing-text"
                     style={{ fontSize: '1.2rem', fontWeight: '300' }}
                 >
                     Tailored digital solutions to grow your business online.
