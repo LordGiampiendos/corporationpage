@@ -16,9 +16,9 @@ const ProductDetailPage = () => {
     const [editing, setEditing] = useState(false);
     const [successMessage, setSuccessMessage] = useState('');
     const [isLoading, setIsLoading] = useState({ cart: false, wishlist: false });
-    const [loadingEdit, setLoadingEdit] = React.useState(false);
-    const [loadingDelete, setLoadingDelete] = React.useState(false);
-    const [loadingSubmit, setLoadingSubmit] = React.useState(false);
+    const [loadingEdit, setLoadingEdit] = useState(false);
+    const [loadingDelete, setLoadingDelete] = useState(false);
+    const [loadingSubmit, setLoadingSubmit] = useState(false);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -57,8 +57,8 @@ const ProductDetailPage = () => {
     }, [id, authToken]);
 
     const handleCreateComment = async (e) => {
-        e.preventDefault();
         setLoadingSubmit(true);
+        e.preventDefault();
         const formData = new FormData();
         formData.append('content', commentContent);
         formData.append('productId', id);
@@ -75,8 +75,8 @@ const ProductDetailPage = () => {
     };
 
     const handleUpdateComment = async (e) => {
-        e.preventDefault();
         setLoadingEdit(true);
+        e.preventDefault();
         const formData = new FormData();
         formData.append('content', commentContent);
         try {
