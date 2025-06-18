@@ -36,48 +36,44 @@ const HomePage = () => {
 
     return (
         <>
-            <Container fluid className="bg-gradient text-white text-center py-5 mb-5">
-                <h1 className="display-4 mb-4">We Create Your Professional Website</h1>
-                <p className="lead mb-4">Tailored digital solutions to grow your business online.</p>
-                <Button href="#services" variant="light" size="lg" className="shadow-lg">Discover Our Services</Button>
+            <Container fluid className="bg-gradient text-white text-center py-3 mb-5">
+                <h1 className="display-3 mb-3">We Create Your Professional Website</h1>
+                <p className="lead mb-5">Tailored digital solutions to grow your business online.</p>
             </Container>
 
             <Container id="services" className="mb-5">
-                <h2 className="mb-4 text-center display-4 text-primary">Our Services</h2>
+                <h2 className="mb-5 text-center display-3 text-primary">Our Services</h2>
                 <Row className="d-flex justify-content-center">
                     <Col md={4} className="mb-4">
                         <Card className="h-100 shadow-lg border-0 rounded-lg transition-all">
-                            <Card.Body className="p-5 text-center">
-                                <FaLaptop size={60} className="mb-4 text-primary" />
+                            <Card.Body className="p-4 text-center">
+                                <FaLaptop size={70} className="mb-4 text-primary" />
                                 <Card.Title className="h4">Professional Websites</Card.Title>
                                 <Card.Text className="text-muted">
                                     Modern and responsive design to increase your online visibility.
                                 </Card.Text>
-                                <Button variant="outline-primary" size="lg" className="mt-3">Learn More</Button>
                             </Card.Body>
                         </Card>
                     </Col>
                     <Col md={4} className="mb-4">
                         <Card className="h-100 shadow-lg border-0 rounded-lg transition-all">
-                            <Card.Body className="p-5 text-center">
-                                <FaShoppingCart size={60} className="mb-4 text-primary" />
+                            <Card.Body className="p-4 text-center">
+                                <FaShoppingCart size={70} className="mb-4 text-primary" />
                                 <Card.Title className="h4">E-commerce</Card.Title>
                                 <Card.Text className="text-muted">
                                     Sell your products online with easy-to-use and secure platforms.
                                 </Card.Text>
-                                <Button variant="outline-primary" size="lg" className="mt-3">Learn More</Button>
                             </Card.Body>
                         </Card>
                     </Col>
                     <Col md={4} className="mb-4">
                         <Card className="h-100 shadow-lg border-0 rounded-lg transition-all">
-                            <Card.Body className="p-5 text-center">
-                                <FaBullhorn size={60} className="mb-4 text-primary" />
+                            <Card.Body className="p-4 text-center">
+                                <FaBullhorn size={70} className="mb-4 text-primary" />
                                 <Card.Title className="h4">SEO & Digital Marketing</Card.Title>
                                 <Card.Text className="text-muted">
                                     Personalized strategies to improve ranking and reach new customers.
                                 </Card.Text>
-                                <Button variant="outline-primary" size="lg" className="mt-3">Learn More</Button>
                             </Card.Body>
                         </Card>
                     </Col>
