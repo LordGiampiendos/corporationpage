@@ -58,11 +58,11 @@ const SuccessPage = () => {
           }}
         >
           {isLoading ? (
-            <Spinner animation="border" size="sm" className="me-10" />
+            <Spinner animation="border" size="sm" style={{ marginRight: "10px" }} />
           ) : paymentStatus?.success ? (
-            <FaCheckCircle className="me-10" />
+            <FaCheckCircle style={{ marginRight: "10px" }} />
           ) : (
-            <FaTimesCircle className="me-10" />
+            <FaTimesCircle style={{ marginRight: "10px" }} />
           )}
           {isLoading ? 'Processing...' : paymentStatus?.success ? 'Success' : 'Failed'}
         </h1>
