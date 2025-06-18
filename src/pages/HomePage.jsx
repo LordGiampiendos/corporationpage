@@ -36,9 +36,9 @@ const HomePage = () => {
 
     return (
         <>
-            <Container fluid style={{ background: 'rgba(169, 169, 169, 0.5)' }} className="text-white text-center py-5 mb-5">
-                <h1 className="display-4 mb-4">We Create Your Professional Website</h1>
-                <p className="lead mb-4">Tailored digital solutions to grow your business online.</p>
+            <Container fluid style={{ background: 'rgba(169, 169, 169, 0.5)' }} className="text-center py-5 mb-5">
+                <h1 className="display-4 mb-4 text-secondary">We Create Your Professional Website</h1> {/* Large text in gray */}
+                <p className="lead mb-4 text-darkslategray">Tailored digital solutions to grow your business online.</p>
                 <Button href="#services" variant="light" size="lg" className="shadow-lg">Discover Our Services</Button>
             </Container>
             
