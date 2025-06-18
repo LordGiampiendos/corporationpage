@@ -43,7 +43,7 @@ const HomePage = () => {
             </Container>
             
             <Container id="services" className="mb-5">
-                <h2 className="mb-4 text-center text-secondary">Our Services</h2> {/* Changed to text-secondary */}
+                <h2 className="mb-4 text-center">Our Services</h2> {/* Changed to text-secondary */}
                 <Row className="d-flex justify-content-center">
                     <Col md={4} className="mb-4">
                         <Card className="h-100 shadow-lg border-0 rounded-lg transition-all" style={{ backgroundColor: 'rgba(169, 169, 169, 0.1)' }}>
