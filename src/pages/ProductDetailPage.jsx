@@ -247,9 +247,22 @@ const ProductDetailPage = () => {
                                         <strong>You</strong>
                                         <p>{userComment.content}</p>
                                     </div>
-                                    <div>
-                                        <Button variant="link" onClick={() => setEditing(true)}>Edit</Button>
-                                        <Button variant="link" onClick={handleDeleteComment}>Delete</Button>
+                                    <div className="d-flex flex-column align-items-end ms-3">
+                                        <Button
+                                            variant="outline-primary"
+                                            size="sm"
+                                            className="mb-2"
+                                            onClick={() => setEditing(true)}
+                                        >
+                                            Edit
+                                        </Button>
+                                        <Button
+                                            variant="outline-danger"
+                                            size="sm"
+                                            onClick={handleDeleteComment}
+                                        >
+                                            Delete
+                                        </Button>
                                     </div>
                                 </div>
                             </Card.Body>
