@@ -36,12 +36,12 @@ const HomePage = () => {
 
     return (
         <>
-            <Container fluid className="bg-gradient text-white text-center py-5 mb-5">
+            <Container fluid style={{ background: 'rgba(169, 169, 169, 0.5)' }} className="text-white text-center py-5 mb-5">
                 <h1 className="display-4 mb-4">We Create Your Professional Website</h1>
                 <p className="lead mb-4">Tailored digital solutions to grow your business online.</p>
                 <Button href="#services" variant="light" size="lg" className="shadow-lg">Discover Our Services</Button>
             </Container>
-
+            
             <Container id="services" className="mb-5">
                 <h2 className="mb-4 text-center display-4 text-primary">Our Services</h2>
                 <Row className="d-flex justify-content-center">
