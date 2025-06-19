@@ -18,22 +18,31 @@ const ProductDetailPage = () => {
     const [isLoading, setIsLoading] = useState({ cart: false, wishlist: false });
     const [loadingDelete, setLoadingDelete] = useState(false);
     const [loadingSubmit, setLoadingSubmit] = useState(false);
-    const iframeRefs = useRef([]);
+    
+    function ProductIframe({ demoUrl }) {
+        const iframeRef = useRef(null);
 
-    useEffect(() => {
-        iframeRefs.current.forEach((iframe) => {
-            if (!iframe) return;
-            const origin = iframe.getAttribute("data-origin");
-            if(product) {
+        useEffect(() => {
+            const iframe = iframeRef.current;
+            if (iframe) {
+                const origin = new URL(demoUrl).origin;
                 iframe.onload = () => {
-                    iframe.contentWindow?.postMessage(
-                        { type: "HIDE_COOKIES_BANNER" },
-                        origin
-                    );
+                    iframe.contentWindow?.postMessage({ type: "HIDE_COOKIES_BANNER" }, origin);
                 };
             }
-        });
-    }, [product]);
+        }, [demoUrl]);
+
+        return (
+            <iframe
+                ref={iframeRef}
+                src={demoUrl}
+                width="100%"
+                height="100%"
+                title="Product Demo"
+                style={{ border: '1px solid #ddd', borderRadius: '8px' }}
+            />
+        );
+    }
 
     useEffect(() => {
         const fetchData = async () => {
@@ -204,15 +213,7 @@ const ProductDetailPage = () => {
                             <Card.Text className="text-center fs-4 fw-bold">€{product.price}</Card.Text>
                             {product.demoUrl && (
                                 <div className="text-center">
-                                    <iframe
-                                        key={product.id}
-                                        ref={(el) => (iframeRefs.current[index] = el)}
-                                        src={product.demoUrl}
-                                        width="100%"
-                                        height="100%"
-                                        title="Product Demo"
-                                        style={{ border: '1px solid #ddd', borderRadius: '8px' }}
-                                    />
+                                    <ProductIframe key={product.id} demoUrl={product.demoUrl} />
                                     <Button variant="link" href={product.demoUrl} target="_blank" rel="noopener noreferrer">
                                         Go to demo
                                     </Button>
