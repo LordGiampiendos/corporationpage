@@ -62,8 +62,7 @@ const CookieConsent = () => {
           </Modal.Header>
           <Modal.Body>
             Questo sito utilizza cookie per migliorare l'esperienza utente.
-            Puoi scegliere di accettare tutti i cookie o solo quelli essenziali
-            (ad es. per l'autenticazione e la sessione).
+            Puoi scegliere di accettare tutti i cookie o solo quelli essenziali.
             <br />
             <br />
             <a
