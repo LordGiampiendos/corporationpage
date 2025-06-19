@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { Container, Badge, Form, Button, Alert, Card, Col, Image, Spinner, Row } from 'react-bootstrap';
@@ -18,6 +18,19 @@ const ProductDetailPage = () => {
     const [isLoading, setIsLoading] = useState({ cart: false, wishlist: false });
     const [loadingDelete, setLoadingDelete] = useState(false);
     const [loadingSubmit, setLoadingSubmit] = useState(false);
+    const iframeRef = useRef(null);
+
+    useEffect(() => {
+        const iframe = iframeRef.current;
+        if (iframe) {
+            iframe.onload = () => {
+                iframe.contentWindow.postMessage(
+                    { type: "HIDE_COOKIES_BANNER" },
+                    product.demoUrl
+                );
+            };
+        }
+    }, [product.demoUrl]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -189,6 +202,7 @@ const ProductDetailPage = () => {
                             {product.demoUrl && (
                                 <div className="text-center">
                                     <iframe
+                                        ref={iframeRef}
                                         src={product.demoUrl}
                                         width="100%"
                                         height="100%"
