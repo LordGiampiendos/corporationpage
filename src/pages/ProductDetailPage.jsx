@@ -18,19 +18,22 @@ const ProductDetailPage = () => {
     const [isLoading, setIsLoading] = useState({ cart: false, wishlist: false });
     const [loadingDelete, setLoadingDelete] = useState(false);
     const [loadingSubmit, setLoadingSubmit] = useState(false);
-    const iframeRef = useRef(null);
+    const iframeRefs = useRef([]);
 
     useEffect(() => {
-        const iframe = iframeRef.current;
-        if (iframe) {
-            iframe.onload = () => {
-                iframe.contentWindow.postMessage(
-                    { type: "HIDE_COOKIES_BANNER" },
-                    product.demoUrl
-                );
-            };
-        }
-    }, [product.demoUrl]);
+        iframeRefs.current.forEach((iframe) => {
+            if (!iframe) return;
+            const origin = iframe.getAttribute("data-origin");
+            if(product) {
+                iframe.onload = () => {
+                    iframe.contentWindow?.postMessage(
+                        { type: "HIDE_COOKIES_BANNER" },
+                        origin
+                    );
+                };
+            }
+        });
+    }, [product]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -202,7 +205,8 @@ const ProductDetailPage = () => {
                             {product.demoUrl && (
                                 <div className="text-center">
                                     <iframe
-                                        ref={iframeRef}
+                                        key={product.id}
+                                        ref={(el) => (iframeRefs.current[index] = el)}
                                         src={product.demoUrl}
                                         width="100%"
                                         height="100%"
