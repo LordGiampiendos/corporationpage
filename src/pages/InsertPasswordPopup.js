@@ -27,6 +27,7 @@ const InsertPasswordPopup = ({ show, handleClose, authToken }) => {
         setLoading(false);
         setNewPassword('');
         handleClose();
+        window.location.reload();
       })
       .catch(() => {
         setLoading(false);
