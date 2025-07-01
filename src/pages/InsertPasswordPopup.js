@@ -15,10 +15,7 @@ const InsertPasswordPopup = ({ show, handleClose, authToken }) => {
     }
 
     setLoading(true);
-    const formData = new FormData();
-    formData.append("password", newPassword);
-
-    axios.post('https://servercorporation.pagekite.me/api/users/insert-password', formData, {
+    axios.post('https://servercorporation.pagekite.me/api/users/insert-password', { newPassowrd }, {
       headers: {
         Authorization: `Bearer ${authToken}`,
       },
