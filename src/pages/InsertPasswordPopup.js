@@ -15,7 +15,7 @@ const InsertPasswordPopup = ({ show, handleClose, authToken }) => {
     }
 
     setLoading(true);
-    axios.post('https://servercorporation.pagekite.me/api/users/insert-password', { newPassowrd }, {
+    axios.post('https://servercorporation.pagekite.me/api/users/insert-password', { newPassword }, {
       headers: {
         Authorization: `Bearer ${authToken}`,
       },
