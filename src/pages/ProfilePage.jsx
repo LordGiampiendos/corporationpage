@@ -94,10 +94,7 @@ const ProfilePage = () => {
       return;
     }
     setIsLoadingOtp(true);
-    let formData = new FormData();
-    formData.append("code", mfaCode.trim());
-    formData.append("secret", secret);
-    axios.post("https://servercorporation.pagekite.me/api/users/verify-code", formData, {
+    axios.post("https://servercorporation.pagekite.me/api/users/verify-code", { code: mfaCode.trim(), secret: secret}, {
       headers: { 'Authorization': `Bearer ${authToken}` },
     })
       .then(response => {
