@@ -101,6 +101,23 @@ const HomePage = () => {
             </Container>
 
             <Container className="mb-5">
+                <h2 className="mb-5 text-center display-4 text-secondary">Download Our Android App</h2>
+                <Row className="d-flex justify-content-center">
+                    <Col md={4} className="mb-4">
+                        <Card className="h-100 shadow-lg border-0 rounded-lg transition-all">
+                            <Card.Body className="p-5 text-center">
+                                <Card.Img variant="top" src="corporationapp_qrcode.png" />
+                                <Card.Title className="h4 text-dark">Scan to download now!</Card.Title>
+                                <Card.Text className="text-muted">
+                                Scan the QR code below to download our Android app and start using our services on the go!
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                </Row>
+            </Container>
+
+            <Container className="mb-5">
                 <h2 className="mb-5 text-center display-4 text-secondary">What Our Clients Say</h2>
                 <Row>
                     {comments.length > 0 ? comments.map(comment => (
@@ -142,3 +159,4 @@ const HomePage = () => {
 }
 
 export default HomePage;
+
