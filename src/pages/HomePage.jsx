@@ -109,7 +109,7 @@ const HomePage = () => {
                                 <Card.Img variant="top" src="corporationapp_qrcode.png" />
                                 <Card.Title className="h4 text-dark">Scan to download now!</Card.Title>
                                 <Card.Text className="text-muted">
-                                Scan the QR code below to download our Android app and start using our services on the go!
+                                Scan the QR code below to download our app and start using our services on the go!
                                 </Card.Text>
                             </Card.Body>
                         </Card>
@@ -159,4 +159,5 @@ const HomePage = () => {
 }
 
 export default HomePage;
+
 
