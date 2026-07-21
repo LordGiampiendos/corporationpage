@@ -65,13 +65,20 @@ const CookieConsent = () => {
             Puoi scegliere di accettare tutti i cookie o solo quelli essenziali.
             <br />
             <br />
-            <a
-              href="#"
+            <button
+              type="button"
               onClick={handleShowPrivacy}
-              style={{ color: "#f1d600" }}
+              style={{
+                background: "none",
+                border: "none",
+                padding: 0,
+                color: "#f1d600",
+                textDecoration: "underline",
+                cursor: "pointer"
+              }}
             >
               Leggi la nostra Informativa sulla Privacy
-            </a>
+            </button>
           </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={handleEssentialOnly}>
