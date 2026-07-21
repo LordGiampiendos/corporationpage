@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
-import { Container, Button, Table, Alert, Card, Spinner } from 'react-bootstrap';
-import { useAuth } from '../contexts/AuthContext';
+import React, { useCallback, useEffect, useState } from 'react';
+import { Alert, Button, Card, Container, Spinner, Table } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../contexts/AuthContext';
 
 const CartPage = () => {
   const navigate = useNavigate();
@@ -20,23 +20,20 @@ const CartPage = () => {
     }
 
     if (authToken) {
-      if (cart) {
-        try {
-          axios.get('https://servercorporation.pagekite.me/api/cart', {
-            headers: { Authorization: `Bearer ${authToken}` }
-          }).then(response => {
-            setCart(response.data);
-            localStorage.setItem('cart', JSON.stringify(response.data));
-            setLoading(false);
-          });
-        } catch (error) {
+      axios.get('https://servercorporation.pagekite.me/api/cart', {
+        headers: { Authorization: `Bearer ${authToken}` }
+      })
+        .then(response => {
+          setCart(response.data);
+          localStorage.setItem('cart', JSON.stringify(response.data));
+          setLoading(false);
+        })
+        .catch(() => {
           setAlertMessage('Error in updating or loading the cart');
           setShowAlert(true);
           setLoading(false);
-        }
-      }
-    }
-    else {
+        });
+    } else {
       setLoading(false);
     }
   }, [authToken]);
