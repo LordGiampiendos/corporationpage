@@ -278,7 +278,7 @@ const ProductDetailPage = () => {
                                         <p>{userComment.content}</p>
                                     </div>
                                 </div>
-                                <div className="d-flex flex-column align-items-end ms-3">
+                                <div className="ms-3">
                                     <Button
                                         variant="outline-primary"
                                         size="sm"
