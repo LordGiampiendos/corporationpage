@@ -18,7 +18,7 @@ const ProductDetailPage = () => {
     const [isLoading, setIsLoading] = useState({ cart: false, wishlist: false });
     const [loadingDelete, setLoadingDelete] = useState(false);
     const [loadingSubmit, setLoadingSubmit] = useState(false);
-    
+
     function ProductIframe({ demoUrl }) {
         const iframeRef = useRef(null);
 
@@ -277,37 +277,37 @@ const ProductDetailPage = () => {
                                         <strong>You</strong>
                                         <p>{userComment.content}</p>
                                     </div>
-                                    <div className="d-flex flex-column align-items-end ms-3">
-                                        <Button
-                                            variant="outline-primary"
-                                            size="sm"
-                                            className="mb-2"
-                                            onClick={() => setEditing(true)}
-                                        >
-                                            Edit
-                                        </Button>
-                                        <Button
-                                            variant="outline-danger"
-                                            size="sm"
-                                            onClick={handleDeleteComment}
-                                        >
-                                            {loadingDelete ? (
-                                                <>
-                                                    <Spinner
-                                                        as="span"
-                                                        animation="border"
-                                                        size="sm"
-                                                        role="status"
-                                                        aria-hidden="true"
-                                                        className="me-2"
-                                                    />
-                                                    Deleting...
-                                                </>
-                                            ) : (
-                                                'Delete'
-                                            )}
-                                        </Button>
-                                    </div>
+                                </div>
+                                <div className="d-flex flex-column align-items-end ms-3">
+                                    <Button
+                                        variant="outline-primary"
+                                        size="sm"
+                                        className="me-2"
+                                        onClick={() => setEditing(true)}
+                                    >
+                                        Edit
+                                    </Button>
+                                    <Button
+                                        variant="outline-danger"
+                                        size="sm"
+                                        onClick={handleDeleteComment}
+                                    >
+                                        {loadingDelete ? (
+                                            <>
+                                                <Spinner
+                                                    as="span"
+                                                    animation="border"
+                                                    size="sm"
+                                                    role="status"
+                                                    aria-hidden="true"
+                                                    className="me-2"
+                                                />
+                                                Deleting...
+                                            </>
+                                        ) : (
+                                            'Delete'
+                                        )}
+                                    </Button>
                                 </div>
                             </Card.Body>
                         </Card>
